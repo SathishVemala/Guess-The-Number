@@ -9,3 +9,92 @@
 • Adding more rounds.
 • Displaying score.
 • Giving points based on the number of attempts.
+
+Here's a detailed explanation of the code along with the expected output:
+
+### Points Covered in the Code
+
+1. **Imports and Initialization**:
+   - `Scanner` is imported to take user input.
+   - `Random` is imported to generate random numbers.
+   - Variables `maxAttempts`, `maxRounds`, and `score` are initialized to set the game parameters.
+
+2. **Game Setup**:
+   - A `for` loop runs for a fixed number of rounds (`maxRounds`).
+
+3. **Round Initialization**:
+   - In each round, a random number between 1 and 100 is generated.
+   - Variables `attempts` and `guessed` are initialized to track the number of attempts and whether the number has been guessed.
+
+4. **User Interaction**:
+   - The user is prompted to guess the number.
+   - User's input is read and compared to the randomly generated number.
+   
+5. **Feedback Mechanism**:
+   - If the user's guess is correct, a congratulatory message is printed, the score is updated based on the remaining attempts, and the loop breaks.
+   - If the guess is too low or too high, appropriate feedback is given.
+
+6. **End of Round**:
+   - If the user exhausts all attempts without guessing the number, the correct number is revealed.
+
+7. **End of Game**:
+   - After all rounds are completed, the total score is displayed.
+
+### How the Number is Guessed Correctly
+
+- The user inputs a guess.
+- The program compares this guess to the generated number.
+- If the guess is correct, the program congratulates the user and awards points based on the remaining attempts.
+- If the guess is incorrect, the program provides feedback to guide the user (whether the number is higher or lower).
+
+### Expected Output
+
+Assuming the user makes guesses, the output will look something like this:
+
+```plaintext
+Round 1 of 5: Guess the number between 1 and 100
+Enter your guess: 50
+The number is higher. Try again.
+Enter your guess: 75
+The number is lower. Try again.
+Enter your guess: 60
+The number is higher. Try again.
+Enter your guess: 70
+The number is lower. Try again.
+Enter your guess: 65
+The number is higher. Try again.
+Enter your guess: 67
+The number is lower. Try again.
+Enter your guess: 66
+Congratulations! You guessed the number in 7 attempts. You earned 4 points.
+
+Round 2 of 5: Guess the number between 1 and 100
+Enter your guess: 30
+The number is higher. Try again.
+Enter your guess: 50
+Congratulations! You guessed the number in 2 attempts. You earned 9 points.
+
+Round 3 of 5: Guess the number between 1 and 100
+Enter your guess: 45
+The number is lower. Try again.
+Enter your guess: 20
+The number is higher. Try again.
+Enter your guess: 30
+Congratulations! You guessed the number in 3 attempts. You earned 8 points.
+
+Round 4 of 5: Guess the number between 1 and 100
+Enter your guess: 10
+The number is higher. Try again.
+...
+You've used all your attempts. The number was 58.
+
+Round 5 of 5: Guess the number between 1 and 100
+Enter your guess: 85
+The number is lower. Try again.
+Enter your guess: 75
+Congratulations! You guessed the number in 2 attempts. You earned 9 points.
+
+Game over! Your total score is: 30
+```
+
+The actual output will depend on the user's guesses and the random numbers generated in each round.
